@@ -261,6 +261,8 @@ dependencies {
     androidTestImplementation libs.androidx.junit
     androidTestImplementation libs.room.testing
     androidTestUtil libs.androidx.orchestrator
+    androidTestImplementation 'com.kaspersky.android-components:kaspresso:1.5.4'
+    androidTestImplementation libs.androidx.espresso.intents
 
     // Compose Library
     def composeBom = platform(libs.composeBom)
@@ -275,7 +277,6 @@ dependencies {
     // Compose Test Library
     androidTestImplementation(libs.compose.test)
     androidTestImplementation(composeBom)
-    androidTestImplementation 'com.kaspersky.android-components:kaspresso:1.5.4'
 }
 
 private setSigningConfigKey(config, Properties props) {
