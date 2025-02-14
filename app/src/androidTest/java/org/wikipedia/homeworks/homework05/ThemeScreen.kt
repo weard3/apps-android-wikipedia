@@ -1,6 +1,7 @@
 package org.wikipedia.homeworks.homework05
 
 import com.google.android.material.textview.MaterialTextView
+import io.github.kakaocup.kakao.image.KImageView
 import io.github.kakaocup.kakao.slider.KSlider
 import io.github.kakaocup.kakao.switch.KSwitch
 import io.github.kakaocup.kakao.text.KButton
@@ -46,6 +47,14 @@ val serifBtn = KButton { withId(R.id.button_font_family_serif) }
  * Свитч включения фокус мода
  */
 val focusModeSwitch = KSwitch { withId(R.id.theme_chooser_reading_focus_mode_switch) }
+
+/**
+ * Изображение фокус мода
+ */
+val focusModeImg = KImageView {
+    withParent { withId(R.id.readingFocusModeContainer) }
+    withDrawable(R.drawable.ic_icon_reading_focus_mode)
+}
 
 /**
  * Описание фокус мода
