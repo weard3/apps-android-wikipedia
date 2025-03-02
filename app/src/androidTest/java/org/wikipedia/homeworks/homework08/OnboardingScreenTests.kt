@@ -85,4 +85,18 @@ class OnboardingScreenTests : TestCase() {
             }
         }
     }
+
+    @Test
+    fun languageListContainsEnglish() {
+        run {
+            step("Проверка, что первый язык в списке - 1. English") {
+                OnboardingScreen.pager.childAt<OnboardingItem>(0) {
+                    languageList.childAt<OnboardingLanguageListItem>(0) {
+                        isDisplayed()
+                        hasText("1.\t\tEnglish")
+                    }
+                }
+            }
+        }
+    }
 }
