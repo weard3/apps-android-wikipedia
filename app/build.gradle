@@ -41,7 +41,10 @@ android {
         versionCode 50518
         testApplicationId 'org.wikipedia.test'
         testInstrumentationRunner = "com.kaspersky.kaspresso.runner.KaspressoRunner"
+        // чистка приложения перед каждым запуском
         testInstrumentationRunnerArguments clearPackageData: 'true'
+        // приложение не удаляется после теста
+        testInstrumentationRunnerArguments.leaveApp = 'true'
 
         vectorDrawables.useSupportLibrary = true
 
