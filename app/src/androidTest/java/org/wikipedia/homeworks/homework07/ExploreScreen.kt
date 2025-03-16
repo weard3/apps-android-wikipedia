@@ -19,4 +19,8 @@ object ExploreScreen : KScreen<ExploreScreen>() {
             itemType(::InTheNewsItem)
         }
     )
+
+    fun getTopReadItem(): TopReadItem {
+        return feed.childWith<TopReadItem> { withDescendant { withText("Top read") } }
+    }
 }
